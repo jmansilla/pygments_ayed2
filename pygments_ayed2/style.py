@@ -13,6 +13,7 @@ class Ayed2Style(Style):
 
     styles = {
         Token.Keyword.Type:     'ansibrightblue',
+        Token.Keyword.Type.Definition: 'ansigreen',
         Token.String:           'ansibrightblue',
         Token.Number:           'ansibrightcyan',
         Token.Operator:         'ansibrightred',
@@ -22,4 +23,6 @@ class Ayed2Style(Style):
         Punctuation.Assignment: 'ansibrightyellow',
         Name.NamedLiteral:      'ansimagenta',
         Name.Builtin:           'ansibrightmagenta',
+        Token.Keyword.Type.Enum: 'ansibrightred',
     }
+
