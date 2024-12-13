@@ -10,9 +10,11 @@ class Ayed2Lexer(RegexLexer):
         'root': [
             (r'\s+', Text),  # whitespace
             (r'//.*?$', Comment),  # single line comment
-            (r'var', Keyword),  # keyword
+            (r'type|enumerate|tuple|end', Keyword.Type.Definition),  # types declarations
             (r'int|char|bool|real|array|pointer|of', Keyword.Type),  # types
-            (r':=', Punctuation.Assignment),  # classes
+            (r':=|=', Punctuation.Assignment),  # assignments (for vars, and for types)
+            (r'var|:', Keyword.Declaration),  # keyword
+            (r'\b[A-Z].*?\b', Keyword.Type.Enum),  # enums constants
             (r'if|then|else|fi|while|do|od', Keyword),  # control flow keywords
             (r'alloc|free', Name.Builtin),  # built-in functions
             (r'==|!=|<|<=|>|>=', Operator),  # comparison operators
