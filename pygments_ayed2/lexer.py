@@ -15,8 +15,9 @@ class Ayed2Lexer(RegexLexer):
             (r':=|=', Punctuation.Assignment),  # assignments (for vars, and for types)
             (r'var|:', Keyword.Declaration),  # keyword
             (r'\b[A-Z].*?\b', Keyword.Type.Enum),  # enums constants
-            (r'if|then|else|fi|while|do|od', Keyword),  # control flow keywords
+            (r'if|then|else|fi|while|do|od|for|to|downto', Keyword),  # control flow keywords
             (r'alloc|free', Name.Builtin),  # built-in functions
+            (r'->|\.', Punctuation),  # Field access
             (r'==|!=|<|<=|>|>=', Operator),  # comparison operators
             (r'\+\+|--|\+|-|\*|/|%|!', Operator),  # arithmetic operators
             (r'\&\&|\|\|', Operator),  # logical operators

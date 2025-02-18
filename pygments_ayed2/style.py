@@ -13,13 +13,13 @@ class Ayed2Style(Style):
 
     styles = {
         Token.Keyword.Type:     'bold #0099ff',
-        Token.Keyword.Type.Definition: 'ansigreen',
+        Token.Keyword.Type.Definition: '#009900',
         Token.String:           'bold #0099ff',
         Token.Number:           'ansibrightcyan',
         Token.Operator:         'ansibrightred',
         Token.Keyword:          'ansibrightgreen',
         Token.Name:             'ansiwhite',
-        Token.Punctuation:      'ansicyan',
+        Token.Punctuation:      '#00cccc',
         Punctuation.Assignment: 'ansibrightyellow',
         Name.NamedLiteral:      'ansimagenta',
         Name.Builtin:           'ansibrightmagenta',
