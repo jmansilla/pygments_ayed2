@@ -12,9 +12,9 @@ class Ayed2Style(Style):
     line_number_special_color = "#8f9494"
 
     styles = {
-        Token.Keyword.Type:     'ansibrightblue',
+        Token.Keyword.Type:     'bold #0099ff',
         Token.Keyword.Type.Definition: 'ansigreen',
-        Token.String:           'ansibrightblue',
+        Token.String:           'bold #0099ff',
         Token.Number:           'ansibrightcyan',
         Token.Operator:         'ansibrightred',
         Token.Keyword:          'ansibrightgreen',
@@ -24,5 +24,6 @@ class Ayed2Style(Style):
         Name.NamedLiteral:      'ansimagenta',
         Name.Builtin:           'ansibrightmagenta',
         Token.Keyword.Type.Enum: 'ansibrightred',
+        Token.Comment:          'italic #888',
     }
 
