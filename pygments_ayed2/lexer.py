@@ -17,12 +17,14 @@ class Ayed2Lexer(RegexLexer):
             (r'\b[A-Z].*?\b', Keyword.Type.Enum),  # enums constants
             (r'if|then|else|fi|while|do|od|for|to|downto', Keyword),  # control flow keywords
             (r'alloc|free', Name.Builtin),  # built-in functions
+            (r'getenv', Name.Builtin),      # another built-in
             (r'->|\.', Punctuation),  # Field access
             (r'==|!=|<|<=|>|>=', Operator),  # comparison operators
             (r'\+\+|--|\+|-|\*|/|%|!', Operator),  # arithmetic operators
             (r'\&\&|\|\|', Operator),  # logical operators
             (r'null|true|false|inf', Name.NamedLiteral),  # literals
-            (r'\'.\'', String),  # Char literals
+            (r'\'.\'', String.Char),  # Char literals
+            (r'\".*\"', String.String),  # Long string literals
             (r'\d+\.\d+', Number.Float),  # floating point
             (r'\d+', Number.Integer),  # integers
             (r'\w+', Name),  # identifiers
