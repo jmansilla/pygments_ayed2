@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pygments_ayed2"
-version = "0.1.1"
+version = "0.1.2"
 description = "Pygments support for AyED2 Language"
 authors = ["Javier Mansilla <javimansilla@gmail.com>"]
 license = "MIT"
